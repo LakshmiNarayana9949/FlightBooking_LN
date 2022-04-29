@@ -9,7 +9,7 @@ namespace InventoryService.Services
     public interface IInventory
     {
         void PlanInventory(Inventory inventory);
-        void ShowInventories();
+        List<Inventory> ShowInventories();
         void CancelInventory(int id);
     }
 }

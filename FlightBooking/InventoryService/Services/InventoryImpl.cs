@@ -3,11 +3,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using InventoryService.DBContext;
 
 namespace InventoryService.Services
 {
     public class InventoryImpl : IInventory
     {
+        public InventoryDbContext _inventoryDbContext;
+        public InventoryImpl(InventoryDbContext inventoryDbContext)
+        {
+            _inventoryDbContext = inventoryDbContext;
+        }
         public void CancelInventory(int id)
         {
             
@@ -15,12 +21,12 @@ namespace InventoryService.Services
 
         public void PlanInventory(Inventory inventory)
         {
-            
+            _inventoryDbContext.lstInventories.Add(inventory);
         }
 
-        public void ShowInventories()
+        public List<Inventory> ShowInventories()
         {
-            
+            return _inventoryDbContext.lstInventories.ToList();
         }
     }
 }

@@ -7,6 +7,7 @@ namespace InventoryService.Models
 {
     public class Inventory
     {
+        public int Id { get; set; }
         public int FlightNumber { get; set; }
         public int AirLineId { get; set; }
         public string FromPlace { get; set; }
