@@ -1,6 +1,5 @@
 ﻿using InventoryService.Models;
 using InventoryService.Services;
-using InventoryService.DBContext;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -14,16 +13,24 @@ namespace InventoryService.Controllers
     [ApiController]
     public class InventoryController : ControllerBase
     {
-        public readonly InventoryDbContext _inventory;
-        public InventoryController(InventoryDbContext inventory)
+        public readonly IInventory _inventory;
+        public InventoryController(IInventory inventory)
         {
             _inventory = inventory;
         }
+
         [HttpGet]
         [Route("GetAllInventories")]
         public IActionResult GetAllInventories()
         {
-            return Ok(_inventory.lstInventories.ToList());
+            return Ok(_inventory.ShowInventories());
+        }
+
+        [HttpPost]
+        [Route("PlanInventory")]
+        public void AddNewInventory(Inventory inventory)
+        {
+            _inventory.PlanInventory(inventory);
         }
     }
 }

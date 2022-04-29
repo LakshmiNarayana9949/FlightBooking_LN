@@ -22,6 +22,7 @@ namespace InventoryService.Services
         public void PlanInventory(Inventory inventory)
         {
             _inventoryDbContext.lstInventories.Add(inventory);
+            _inventoryDbContext.SaveChanges();
         }
 
         public List<Inventory> ShowInventories()

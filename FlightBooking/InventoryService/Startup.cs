@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using InventoryService.DBContext;
+using InventoryService.Services;
 
 
 namespace InventoryService
@@ -29,6 +30,7 @@ namespace InventoryService
         {
             services.AddControllers();
             services.AddDbContext<InventoryDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DBConnection")));
+            services.AddTransient<IInventory, InventoryImpl>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
