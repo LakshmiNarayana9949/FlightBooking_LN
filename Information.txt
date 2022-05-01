@@ -1,1 +1,4 @@
 THis file is created with the repository.
+
+add-migration
+update-database

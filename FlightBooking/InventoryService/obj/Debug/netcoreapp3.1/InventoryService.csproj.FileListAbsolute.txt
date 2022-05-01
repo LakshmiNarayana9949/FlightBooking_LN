@@ -61,3 +61,9 @@ D:\LN\FlightBooking\Flightbooking_LN\FlightBooking\InventoryService\obj\Debug\ne
 D:\LN\FlightBooking\Flightbooking_LN\FlightBooking\InventoryService\obj\Debug\netcoreapp3.1\InventoryService.pdb
 D:\LN\FlightBooking\Flightbooking_LN\FlightBooking\InventoryService\obj\Debug\netcoreapp3.1\InventoryService.genruntimeconfig.cache
 D:\LN\FlightBooking\Flightbooking_LN\FlightBooking\InventoryService\obj\Debug\netcoreapp3.1\InventoryService.csproj.AssemblyReference.cache
+D:\LN\FlightBooking\Flightbooking_LN\FlightBooking\InventoryService\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+D:\LN\FlightBooking\Flightbooking_LN\FlightBooking\InventoryService\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+D:\LN\FlightBooking\Flightbooking_LN\FlightBooking\InventoryService\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\LN\FlightBooking\Flightbooking_LN\FlightBooking\InventoryService\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\LN\FlightBooking\Flightbooking_LN\FlightBooking\InventoryService\obj\Debug\netcoreapp3.1\InventoryService.MvcApplicationPartsAssemblyInfo.cs
+D:\LN\FlightBooking\Flightbooking_LN\FlightBooking\InventoryService\obj\Debug\netcoreapp3.1\InventoryService.csproj.CopyComplete
