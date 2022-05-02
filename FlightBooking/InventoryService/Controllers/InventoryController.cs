@@ -21,9 +21,9 @@ namespace InventoryService.Controllers
 
         [HttpGet]
         [Route("GetAllInventories")]
-        public IActionResult GetAllInventories(DateTime fromDate, string fromPlace, string toPlace)
+        public IActionResult GetAllInventories(DateTime fromDate, DateTime toDate, string fromPlace, string toPlace)
         {            
-            return Ok(_inventory.ShowInventories().Where(a => a.StartDate >= fromDate &&
+            return Ok(_inventory.ShowInventories().Where(a => a.StartDate >= fromDate && a.EndDate <= toDate && 
                                                                 a.FromPlace.ToLower().Contains(fromPlace.ToLower()) &&
                                                                 a.ToPlace.ToLower().Contains(toPlace.ToLower())));
         }
