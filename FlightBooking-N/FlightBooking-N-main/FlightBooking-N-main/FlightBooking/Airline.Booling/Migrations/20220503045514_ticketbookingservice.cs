@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Airline.Booking.Migrations
+namespace TicketBookingService.Migrations
 {
-    public partial class MyFirstBooking : Migration
+    public partial class ticketbookingservice : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

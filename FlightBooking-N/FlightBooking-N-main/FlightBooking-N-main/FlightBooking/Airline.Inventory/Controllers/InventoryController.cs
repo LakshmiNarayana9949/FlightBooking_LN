@@ -13,8 +13,8 @@ namespace Airline.Inventory.Controllers
     [ApiController]
     public class InventoryController : ControllerBase
     {
-        public readonly IInventoryRepository _inventory;
-        public InventoryController(IInventoryRepository inventory)
+        public readonly IInventoryInterface _inventory;
+        public InventoryController(IInventoryInterface inventory)
         {
             _inventory = inventory;
         }
@@ -27,7 +27,7 @@ namespace Airline.Inventory.Controllers
         }
 
         [HttpPost]
-        [Route("PlanInventory")]
+        [Route("AddNewInventory")]
         public void AddNewInventory(Inventorys inventory)
         {
             _inventory.PlanInventory(inventory);

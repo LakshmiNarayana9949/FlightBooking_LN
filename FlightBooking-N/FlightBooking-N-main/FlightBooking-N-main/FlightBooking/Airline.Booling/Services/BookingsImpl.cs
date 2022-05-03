@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Airline.Booking.Services
 {
-    public class BookingsRepository : IBookingRepository
+    public class BookingsImpl : IBookingInterface
     {
         public ApplicationBookDbcontext _bookingDbContext;
-        public BookingsRepository(ApplicationBookDbcontext bookingDbContext)
+        public BookingsImpl(ApplicationBookDbcontext bookingDbContext)
         {
             _bookingDbContext = bookingDbContext;
         }

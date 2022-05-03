@@ -1,5 +1,5 @@
-using Authenticate.Interfaces;
-using Authenticate.ViewModels;
+using Authenticate.Models;
+using Authenticate.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -27,7 +27,7 @@ namespace Authenticate
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSingleton<IJWTManagerRepository, JWTManagerRepository>();
+            services.AddSingleton<IJWTManagerInterface, JWTManagerImpl>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

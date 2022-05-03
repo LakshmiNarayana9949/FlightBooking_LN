@@ -31,7 +31,7 @@ namespace Airline.Booling
         {
             services.AddControllers();
             services.AddDbContext<ApplicationBookDbcontext>(o => o.UseSqlServer(Configuration.GetConnectionString("FlightBookingDb")));
-            services.AddTransient<IBookingRepository, BookingsRepository>();
+            services.AddTransient<IBookingInterface, BookingsImpl>();
             services.AddAuthentication(x =>
             {
                 x.DefaultAuthenticateScheme = "TestKey";

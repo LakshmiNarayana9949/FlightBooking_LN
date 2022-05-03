@@ -1,5 +1,5 @@
-﻿using Authenticate.Interfaces;
-using Authenticate.ViewModels;
+﻿using Authenticate.Services;
+using Authenticate.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -13,26 +13,26 @@ namespace Authenticate.Controllers
     //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class UserController : ControllerBase
     {
-        private readonly IJWTManagerRepository iJWTManager;
+        private readonly IJWTManagerInterface iJWTManager;
 
-        public UsersController(IJWTManagerRepository jWTManager)
+        public UserController(IJWTManagerInterface jWTManager)
         {
             iJWTManager = jWTManager;
         }
 
         [HttpGet]
-        [Route("get-all-users")]
-        public List<string> Get()
+        [Route("GetAllUsers")]
+        public List<string> GetAllUsers()
         {
             var users = new List<string>();
             return users;
         }
         [AllowAnonymous]
         [HttpPost]
-        [Route("authenticate")]
-        public IActionResult Authenticate(Users userdata)
+        [Route("Authenticate")]
+        public IActionResult Authenticate(User userdata)
         {
             var token = iJWTManager.Authenticate(userdata);
             if (token == null)

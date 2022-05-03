@@ -1,7 +1,8 @@
 {
   "Routes": [
+
     {
-      "DownstreamPathTemplate": "/api/Bookings/get-all-Tickets",
+      "DownstreamPathTemplate": "/api/Bookings/GetAllTickets",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -9,15 +10,16 @@
           "Port": 62554
         }
       ],
-      "UpstreamPathTemplate": "/api/gatway/Bookings/get-all-Tickets",
+      "UpstreamPathTemplate": "/api/gateway/Bookings/GetAllTickets",
       "UpstreamHttpMethod": [ "Get" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "TestKey",
         "AllowedScopes": []
       }
     },
+
     {
-      "DownstreamPathTemplate": "/api/Bookings/insert-booking-details",
+      "DownstreamPathTemplate": "/api/Bookings/BookTicket",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -25,13 +27,14 @@
           "Port": 62554
         }
       ],
-      "UpstreamPathTemplate": "/api/gatway/Bookings/insert-booking-details",
+      "UpstreamPathTemplate": "/api/gateway/Bookings/BookTicket",
       "UpstreamHttpMethod": [ "Post" ],
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "TestKey",
         "AllowedScopes": []
       }
     },
+
     {
       "DownstreamPathTemplate": "/api/users/authenticate",
       "DownstreamScheme": "http",
@@ -41,9 +44,10 @@
           "Port": 23489
         }
       ],
-      "UpstreamPathTemplate": "/api/gatway/users/authenticate",
+      "UpstreamPathTemplate": "/api/gateway/users/authenticate",
       "UpstreamHttpMethod": [ "Post" ]
     }
+
   ],
   "GlobalConfiguration": {
     "BaseUrl": "http://localhost:23488"

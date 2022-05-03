@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Airline.Inventory.Repository
 {
-    public interface IInventoryRepository
+    public interface IInventoryInterface
     {
         void PlanInventory(Inventorys inventory);
         List<Inventorys> ShowInventories();

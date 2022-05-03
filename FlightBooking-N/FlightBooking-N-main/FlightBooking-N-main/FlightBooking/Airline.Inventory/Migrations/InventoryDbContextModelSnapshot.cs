@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace Airline.Inventory.Migrations
+namespace InventoryService.Migrations
 {
     [DbContext(typeof(InventoryDbContext))]
     partial class InventoryDbContextModelSnapshot : ModelSnapshot
@@ -50,26 +50,6 @@ namespace Airline.Inventory.Migrations
                     b.HasKey("AirlineId");
 
                     b.ToTable("tblAirLine");
-
-                    b.HasData(
-                        new
-                        {
-                            AirlineId = 1,
-                            Address = "Hyderabad",
-                            ContactNumber = "9948757854",
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Cargo",
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            AirlineId = 2,
-                            Address = "Banglore",
-                            ContactNumber = "9948077376",
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Indigo",
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
                 });
 
             modelBuilder.Entity("Airline.Inventory.Models.Flight", b =>
@@ -103,26 +83,6 @@ namespace Airline.Inventory.Migrations
                     b.HasKey("FlightID");
 
                     b.ToTable("tblFlight");
-
-                    b.HasData(
-                        new
-                        {
-                            FlightID = 1,
-                            AirLineId = 1,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FlightName = "Enfield",
-                            FlightNumber = "V12345",
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            FlightID = 2,
-                            AirLineId = 2,
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            FlightName = "FZ-MR",
-                            FlightNumber = "VF12345",
-                            UpdatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
                 });
 
             modelBuilder.Entity("Airline.Inventory.Models.Inventorys", b =>

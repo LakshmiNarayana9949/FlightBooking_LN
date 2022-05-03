@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace Airline.Booking.Migrations
+namespace TicketBookingService.Migrations
 {
     [DbContext(typeof(ApplicationBookDbcontext))]
-    [Migration("20220502095112_MyFirstBooking")]
-    partial class MyFirstBooking
+    [Migration("20220503045514_ticketbookingservice")]
+    partial class ticketbookingservice
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

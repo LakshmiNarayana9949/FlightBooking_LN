@@ -29,7 +29,7 @@ namespace Airline.Inventory
         {
             services.AddControllers();
             services.AddDbContext<InventoryDbContext>(o => o.UseSqlServer(Configuration.GetConnectionString("FlightBookingDb")));
-            services.AddTransient<IInventoryRepository, InventoryRepository>();
+            services.AddTransient<IInventoryInterface, InventoryImpl>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

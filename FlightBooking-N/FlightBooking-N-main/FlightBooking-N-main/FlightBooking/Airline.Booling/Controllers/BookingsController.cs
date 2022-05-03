@@ -15,8 +15,8 @@ namespace Airline.Booking.Controllers
     [ApiController]
     public class BookingsController : ControllerBase
     {
-        public readonly IBookingRepository _userRepository;
-        public BookingsController(IBookingRepository userRepository)
+        public readonly IBookingInterface _userRepository;
+        public BookingsController(IBookingInterface userRepository)
         {
             _userRepository = userRepository;
         }
@@ -25,10 +25,10 @@ namespace Airline.Booking.Controllers
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        [Authorize]
+        //[Authorize]
         [HttpPost]
-        [Route("insert-booking-details")]
-        public IActionResult InsertUserDetails([FromBody] List<Bookings> bookings)
+        [Route("BookTicket")]
+        public IActionResult BookTicket([FromBody] List<Bookings> bookings)
         {
             try
             {
@@ -108,10 +108,10 @@ namespace Airline.Booking.Controllers
 
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpGet]
-        [Route("get-all-Tickets")]
-        public IActionResult GetAllUsers()
+        [Route("GetAllTickets")]
+        public IActionResult GetAllTickets()
         {
             try
             {
@@ -125,7 +125,7 @@ namespace Airline.Booking.Controllers
         }
 
         [HttpPut]
-        [Route("cancel-ticket/{TicketID}")]
+        [Route("CancelTicket/{TicketID}")]
         public IActionResult CancelTicket(string TicketID)
         {
             try
@@ -151,8 +151,8 @@ namespace Airline.Booking.Controllers
         }
 
         [HttpGet]
-        [Route("pnr-ticket/{TicketID}")]
-        public IActionResult GetpnrTicket(string TicketID)
+        [Route("GetTicket/{TicketID}")]
+        public IActionResult GetTicket(string TicketID)
         {
             try
             {

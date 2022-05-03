@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Airline.Booking.Services
 {
-    public interface IBookingRepository
+    public interface IBookingInterface
     {
         void Insert(Bookings bookings);
 

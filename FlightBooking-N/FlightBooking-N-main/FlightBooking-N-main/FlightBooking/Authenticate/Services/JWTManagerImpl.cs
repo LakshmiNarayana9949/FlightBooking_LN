@@ -1,5 +1,4 @@
-﻿using Authenticate.Interfaces;
-using Authenticate.ViewModels;
+﻿using Authenticate.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -10,9 +9,9 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Authenticate.ViewModels
+namespace Authenticate.Services
 {
-    public class JWTManagerRepository : IJWTManagerRepository
+    public class JWTManagerImpl : IJWTManagerInterface
     {
         Dictionary<string, string> UserRecords = new Dictionary<string, string>
         {
@@ -23,13 +22,13 @@ namespace Authenticate.ViewModels
 
         private readonly IConfiguration configuartion;
 
-        public JWTManagerRepository(IConfiguration iconfiguration)
+        public JWTManagerImpl(IConfiguration iconfiguration)
         {
             configuartion = iconfiguration;
         }
 
         
-        public Tokens Authenticate(Users users)
+        public Tokens Authenticate(User users)
         {
             if(!UserRecords.Any(x=>x.Key==users.Name && x.Value == users.Password))
             {

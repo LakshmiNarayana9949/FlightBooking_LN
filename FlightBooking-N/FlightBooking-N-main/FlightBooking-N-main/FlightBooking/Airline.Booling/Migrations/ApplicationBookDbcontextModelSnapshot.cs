@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace Airline.Booking.Migrations
+namespace TicketBookingService.Migrations
 {
     [DbContext(typeof(ApplicationBookDbcontext))]
     partial class ApplicationBookDbcontextModelSnapshot : ModelSnapshot
