@@ -36,6 +36,40 @@
     },
 
     {
+      "DownstreamPathTemplate": "/api/Inventory/GetAllInventories",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 11308
+        }
+      ],
+      "UpstreamPathTemplate": "/api/gateway/Inventory/GetAllInventories",
+      "UpstreamHttpMethod": [ "Get" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      }
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/Inventory/AddNewInventory",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 11308
+        }
+      ],
+      "UpstreamPathTemplate": "/api/gateway/Inventory/AddNewInventory",
+      "UpstreamHttpMethod": [ "Post" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "TestKey",
+        "AllowedScopes": []
+      }
+    },
+
+    {
       "DownstreamPathTemplate": "/api/users/authenticate",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [

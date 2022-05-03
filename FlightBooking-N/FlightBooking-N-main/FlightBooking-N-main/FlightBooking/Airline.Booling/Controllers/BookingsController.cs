@@ -25,7 +25,7 @@ namespace Airline.Booking.Controllers
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        //[Authorize]
+        [Authorize]
         [HttpPost]
         [Route("BookTicket")]
         public IActionResult BookTicket([FromBody] List<Bookings> bookings)
@@ -108,7 +108,7 @@ namespace Airline.Booking.Controllers
 
         }
 
-        //[Authorize]
+        [Authorize]
         [HttpGet]
         [Route("GetAllTickets")]
         public IActionResult GetAllTickets()

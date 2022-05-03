@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Airline.Inventory.Controllers
 {
@@ -19,6 +20,7 @@ namespace Airline.Inventory.Controllers
             _inventory = inventory;
         }
 
+        [Authorize]
         [HttpGet]
         [Route("GetAllInventories")]
         public IActionResult GetAllInventories()
@@ -26,6 +28,7 @@ namespace Airline.Inventory.Controllers
             return Ok(_inventory.ShowInventories());
         }
 
+        [Authorize]
         [HttpPost]
         [Route("AddNewInventory")]
         public void AddNewInventory(Inventorys inventory)

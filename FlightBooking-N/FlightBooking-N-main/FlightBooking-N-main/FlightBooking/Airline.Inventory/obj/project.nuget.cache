@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "a0XSKuAvwcL4fO0C+cmInHNoQh8X8eaJBKNJ+j2a3Lns4/gajBsrwJrxZ7thhysp5WL6dm0+11ED0qy3Os5vnA==",
+  "dgSpecHash": "8/ZkgGAl9RlpXK5euOjMXygLh4hJY9WW5YZxX5QCrORaw1BXhkiPqDlUOdl/zqXj4aVi+gXA2rSkDMeTESBPEA==",
   "success": true,
   "projectFilePath": "D:\\LN\\FlightBooking\\Flightbooking_LN\\FlightBooking-N\\FlightBooking-N-main\\FlightBooking-N-main\\FlightBooking\\Airline.Inventory\\InventoryService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cogdotnet06\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\cogdotnet06\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.24\\microsoft.aspnetcore.authentication.jwtbearer.3.1.24.nupkg.sha512",
     "C:\\Users\\cogdotnet06\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\cogdotnet06\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\cogdotnet06\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
